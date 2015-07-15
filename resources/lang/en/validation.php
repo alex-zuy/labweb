@@ -75,6 +75,10 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
 
+    'full_name' => 'The :attribute must be a string of three words.',
+    'selected' => 'The :attribute must be selected.',
+
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -103,6 +107,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'full-name' => 'Full name',
+        'phone-number' => 'Phone number',
+        'age' => 'Age',
+        'group' => 'Group'
+    ],
 
 ];

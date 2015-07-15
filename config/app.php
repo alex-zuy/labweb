@@ -144,6 +144,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Html and Form helpers.
+         */
+        Collective\Html\HtmlServiceProvider::class,
+
+        Jenssegers\Date\DateServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
     ],
 
     /*
@@ -160,6 +167,7 @@ return [
     'aliases' => [
 
         'App'       => Illuminate\Support\Facades\App::class,
+        'Agent'     => Jenssegers\Agent\Facades\Agent::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
         'Auth'      => Illuminate\Support\Facades\Auth::class,
         'Blade'     => Illuminate\Support\Facades\Blade::class,
@@ -169,10 +177,13 @@ return [
         'Cookie'    => Illuminate\Support\Facades\Cookie::class,
         'Crypt'     => Illuminate\Support\Facades\Crypt::class,
         'DB'        => Illuminate\Support\Facades\DB::class,
+        'PrettyDate' => Jenssegers\Date\Date::class,
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
         'File'      => Illuminate\Support\Facades\File::class,
+        'Form'      => Collective\Html\FormFacade::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
         'Inspiring' => Illuminate\Foundation\Inspiring::class,
         'Lang'      => Illuminate\Support\Facades\Lang::class,

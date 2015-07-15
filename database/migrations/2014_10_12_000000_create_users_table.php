@@ -19,6 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
+
+            if(config('database.default') == 'pgsql') {
+                $table->boolean('is_admin')->default('false'); //for postgres
+            }
+            else {
+                //mysql does NOT support boolean type, so this field will be of type TINYINT(1)
+                $table->boolean('is_admin')->default(0); //for mysql
+            }
         });
     }
 
